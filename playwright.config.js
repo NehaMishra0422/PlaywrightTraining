@@ -33,6 +33,18 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
+    //Allows navigation to sites with HTTPS certificate errors.
+    ignoreHTTPSError : true,
+
+    //Enables handling file downloads.
+    acceptDownloads : true,
+
+    //Enables JavaScript in the page; this is already the default.
+    javaScriptEnabled : true,
+
+    //Opens a visible browser.
+    headless : false,
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
@@ -40,6 +52,8 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      //name: 'Mobile Safari',
+     //use: { ...devices['iPhone 12'] },
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
         headless : false,

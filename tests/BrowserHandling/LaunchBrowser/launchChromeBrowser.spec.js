@@ -1,5 +1,6 @@
-import { chromium } from 'playwright';
-(async()=> {
+import {test,expect, chromium } from '@playwright/test';
+
+test('Launch Chromium Browser',async({})=> {
     const browser = await chromium.launch({headless : false}); //launches chrome browser
     const page = await browser.newPage();  // opens new page
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
@@ -7,7 +8,9 @@ import { chromium } from 'playwright';
     await page.getByPlaceholder('Password').fill('admin123');
     await page.getByRole('button' , {name : 'Login' }).click();
     await browser.close();
-})();
+})
+
+
 
 // import { firefox,webkit} from 'playwright';
     // Launch Firefox
