@@ -1,5 +1,10 @@
 import {test,chromium,expect} from '@playwright/test';
 
+const input = {
+    username : '#user-name',
+
+}
+
 test('CSS Selector practice using Sauce Demo', async()=> {
 
  const browser = await chromium.launch({
@@ -8,7 +13,7 @@ test('CSS Selector practice using Sauce Demo', async()=> {
 const page = await browser.newPage();
 await page.goto('https://www.saucedemo.com/');
 await expect(page).toHaveTitle('Swag Labs');   //checks whether the Sawg Labes title is present or not
-await page.locator('#user-name').fill('standard_user');
+await page.locator(input.username).fill('standard_user');
 await page.locator('#password').fill('secret_sauce');
 await page.getByRole('button', {name : 'Login'}).click();
 await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html'); //checks page contains this url or not
