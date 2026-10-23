@@ -45,8 +45,10 @@ example :
 //a[contains(text())='Cart'] -> Text contained in an element
 //h2[contains(text())='Details'] -> Text with different element
 
-text() -> Matches a button whose direct text node is exactly Login.
+text() -> selects eleement based on the exact text content of the element
+Matches a button whose direct text node is exactly Login.
 contains() -> Matches a button whose combined text contains Login, including text in descendant elements.
+              Matches element that contain a specific substring within an attribute.
 
 best to use - getByRole() , getByText()
 
@@ -86,6 +88,9 @@ example :
 </div>
 
 a) following-sibling:: (Finds a sibling element that comes after the current element)
+only sibling ypu will get
+
+following() ->get the silbling along with the child of the sibling
 
 //label[text()='Email']/following-sibling::input
 
@@ -110,7 +115,7 @@ Website used : https://www.demoblaze.com/
 signup page - password
 //input[@id='sign-password']/parent::div
 
-d) ancestor:: (Finds ancestor elements at any level)
+d) ancestor:: (Finds ancestor elements at any level) [parents and grand parents]
 
 //input[@id='email']/ancestor::form
 
@@ -118,7 +123,7 @@ Website used : https://www.demoblaze.com/
 signup page
 //input[@id='sign-password']/ancestor::form
 
-e) descendant:: (Finds elements nested at any depth)
+e) descendant:: (Finds elements nested at any depth) [child and grand chlidren]
 
 //form/descendant::input
 

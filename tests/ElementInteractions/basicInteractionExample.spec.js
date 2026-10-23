@@ -22,3 +22,8 @@ test("Basic Interaction Elements Test 2", async({page})=>{
 
 })
 
+test.only('Focus on element', async({page})=>{
+      await page.goto('https://www.saucedemo.com/');
+      await page.getByPlaceholder('Username').focus();
+      console.log(await expect(page.getByPlaceholder('Username')).toBeFocused());
+})
