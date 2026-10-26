@@ -16,3 +16,6 @@ test ('Radio and CheckBoxes', async({page})=>{
     await expect(page.locator("input[name='radioGroup']").last()).toBeChecked();
     await expect(page.locator("input[name='radioGroup']").nth(1)).not.toBeChecked();
 })
+
+
+//uncheck
