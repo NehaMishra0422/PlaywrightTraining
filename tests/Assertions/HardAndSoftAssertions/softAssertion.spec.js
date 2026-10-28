@@ -11,3 +11,6 @@ test('Soft Assertions' , async({page})=>{
     console.log('soft assertion');
     //await page.getByRole('link',{name : ' Add to cart'}).nth(1).click();
 })
+
+
+//ci cd 
