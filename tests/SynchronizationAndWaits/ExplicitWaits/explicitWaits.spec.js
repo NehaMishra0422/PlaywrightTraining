@@ -13,9 +13,9 @@ page.waitForResponse()	                     Wait for a specific network response
 page.waitForEvent()	                         Wait for an event, such as a popup
 page.waitForTimeout()	                     Wait for a fixed amount of time
 
-There is one more wait that is static wait which we generally avoid
+ static wait which we generally avoid
 .waitForTimeout(5000)
 
 the drawback of using this wait is that, if any action completed before 5000s ,then still it has to wait for 5000s
-Because of this test will take linger time to complete.
+Because of this test will take longer time to complete.
 */
