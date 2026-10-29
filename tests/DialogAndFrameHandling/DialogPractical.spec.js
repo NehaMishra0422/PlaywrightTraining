@@ -46,3 +46,26 @@ test('Prompt dialog',async({page})=>{
     await page.getByRole('button', {name : 'Prompt Alert'}).click();
     await expect(page.locator('#demo')).toContainText('Neha');
 })
+
+test('page.once practical', async({page})=>{
+    await page.goto('https://testautomationpractice.blogspot.com/');
+    page.once('dialog',async dialog=>{
+
+        //verify type of dialog
+        expect(dialog.type()).toContain('prompt');
+
+        //verify the message
+        expect(dialog.message()).toContain('Please enter your name:');
+
+        //verify the default value
+        expect(dialog.defaultValue()).toContain('Harry Potter');
+
+        // by passing value in accept we are changing the value fron Harry Porter to Neha
+        //Value neha will be passed to input box
+        await dialog.accept('Neha');  
+
+    })
+    await page.getByRole('button', {name : 'Prompt Alert'}).click();
+    await expect(page.locator('#demo')).toContainText('Neha');
+})
+//diff b/w page.on and page.once

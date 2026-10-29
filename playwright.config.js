@@ -21,7 +21,7 @@ export default defineConfig({
   /* Retry on CI only */
 
 //to change the timeout globally for all the test(by default it is 30000 ms/30 s)
-   //timeout : 40*1000,
+   timeout : 40*1000,
 
    //to apply longer wait for all expect conditons(by default it is 5000ms /5s)
   //  expect :{

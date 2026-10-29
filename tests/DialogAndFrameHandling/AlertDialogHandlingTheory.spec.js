@@ -29,5 +29,10 @@ page.on('dialog',async dialog()=>{
  these should be written before the action is trigered
 
 
+page.once - listens only one time. Best for handling one event.
+
+
+
+
 
 */

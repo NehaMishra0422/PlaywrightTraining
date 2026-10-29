@@ -6,7 +6,7 @@ test('Explicit waits', async({browser})=>{
     await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
 
     //waitForLoadState - wait for a page content to get loaded in DOM
-    await page.waitForLoadState('domcontentloaded');
+    await page.waitForLoadState('domcontentloaded', {timeout : 3000});
     
     const uName = page.locator('#username');
 
@@ -32,7 +32,8 @@ test('Explicit waits', async({browser})=>{
     //SignIn - waitForResponse()
     const responsePromise = page.waitForResponse(response =>
         response.url().includes('/angularpractice/shop') &&
-        response.status() === 200
+        response.status() === 200,
+         {timeout : 5000}
     );
     await page.locator('#signInBtn').click();
     const response = await responsePromise;
@@ -48,11 +49,11 @@ test('Explicit wait 1',async({browser})=>{
     //waitForEvent()- it will execute till the promise is fulfilled
     // Wait for the new tab and click the link
     const [newPage]= await Promise.all([
-    context.waitForEvent('page'),
+    context.waitForEvent('page', {timeout : 2000}),
     await page.locator("a[href*='/documents-request']").click()
     ]);
  
     // Wait until the new tab reaches the expected URL
     //waitForURL()
-    await newPage.waitForURL('https://rahulshettyacademy.com/documents-request');
+    await newPage.waitForURL('https://rahulshettyacademy.com/documents-request', { timeout : 2000});
 })
