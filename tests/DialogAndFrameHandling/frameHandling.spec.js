@@ -65,3 +65,6 @@ await frame.fill('#username-input', 'John');
 
 
 */
+
+/*A webpage may contain multiple independent iframes. You need to identify the correct frame for each element
+*/

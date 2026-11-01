@@ -68,4 +68,4 @@ test('page.once practical', async({page})=>{
     await page.getByRole('button', {name : 'Prompt Alert'}).click();
     await expect(page.locator('#demo')).toContainText('Neha');
 })
-//diff b/w page.on and page.once
+//page.once multiple dialog
