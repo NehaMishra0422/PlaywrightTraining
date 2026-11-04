@@ -38,3 +38,35 @@ console.log('Updated Value :', updatedValue);
 expect(updatedValue).not.toBe(initialValue);
 })
 
+test('Dynamic content',async({page})=>{
+    await page.goto('https://testautomationpractice.blogspot.com/');
+    const CPULoad = await page.locator('p .chrome-cpu').innerText();
+    console.log(CPULoad);
+    const memory = await page.locator('p .firefox-memory').innerText();
+    console.log(memory);
+    const network = await page.locator('p .chrome-network').innerText();
+    console.log(network);
+    const space = await page.locator('p .firefox-disk').innerText();
+    console.log(space);
+
+    const table = await page.locator('#taskTable');
+
+    const columns =  table.locator('thead tr th');
+    const colCount = await columns.count();
+    expect(colCount).toBe(5);
+
+    const rows = table.locator('tbody tr');
+    const rowCount = await rows.count();
+    expect(rowCount).toBe(4);
+
+    //specific data
+    await expect(page.locator('p .chrome-cpu')).toHaveText(CPULoad);
+    await expect(page.locator('p .firefox-memory')).toHaveText(memory);
+    await expect(page.locator('p .chrome-network')).toHaveText(network);
+    await expect(page.locator('p .firefox-disk')).toHaveText(space);
+
+
+    
+
+})
+

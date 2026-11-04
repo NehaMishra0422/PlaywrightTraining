@@ -29,9 +29,12 @@ test('Save downloaded file',async({page})=>{
         page.locator("a[href*='file.json']").click()
     ])
     await download.saveAs('Downloads/some-file.json');
+    await download.saveAs('D:/DownloadsPW/some-file.json');
 
     //to verify downloaded file name
     const fileName =  download.suggestedFilename();
     await expect(fileName).toBe('some-file.json');
 
 })
+
+//ned to look more

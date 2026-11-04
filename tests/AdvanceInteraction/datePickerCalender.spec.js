@@ -34,6 +34,8 @@ test('Date picker calender 2', async({page})=>{
     const date = await page.locator('#datepicker');
     await date.fill('07/06/2026');
     await expect(date).toHaveValue('07/06/2026');
+
+    await page.waitForTimeout(5000);
 })
 
 test('Date picker calender 3',async({page})=>{

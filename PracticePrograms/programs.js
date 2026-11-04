@@ -69,6 +69,8 @@ if (count == 2) {
     console.log("Not a Prime Number");
 }
 
+//prime no using sq root
+
 6. Factorial of a number
 let num = 5;
 let fact = 1;
