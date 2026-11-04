@@ -17,3 +17,14 @@ test('Sauce Demo',{tag : '@Smoke'},async({page})=>{
     await page.getByRole('button',{name : 'Login'}).click();
     await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 })
+
+test('Demo Blaze',{tag : '@Exploratory'}, async({page})=>{
+     await page.goto('https://www.demoblaze.com/');
+     await page.locator('#login2').click();
+     await page.locator('#loginusername').fill('Neha Mishra');
+     await page.locator('#loginpassword').fill('22041995@April');
+     await page.getByRole('button',{name : 'Log in'}).click();
+     await expect(page).toHaveURL('https://www.demoblaze.com/');
+    
+     await expect(page).toHaveTitle('STORE');
+})
