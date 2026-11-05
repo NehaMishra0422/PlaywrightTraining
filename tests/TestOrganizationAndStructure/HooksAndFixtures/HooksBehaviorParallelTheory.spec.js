@@ -13,6 +13,12 @@ afterAll()	                Executes once per worker after its tests finish
 beforeEach()	            Executes before every test
 afterEach()	                Executes after every test
 
-Important: beforeAll() and afterAll() are executed separately in each worker
+Important: beforeAll() and afterAll() are executed separately in each 
+
+for example there are 5 tests and 3 workers
+beforeAll() - runs 3 times for each worker
+afterall() - runs 3 times for each worker after test finishes
+beforeEach() - runs 5 times for each test
+afterEach() - runs 5 times for after every test 
 
 */
