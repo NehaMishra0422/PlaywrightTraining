@@ -41,6 +41,7 @@ npx playwright test --grep-invert @smoke
 
 Run tests having either Smoke or Regression tag :
 npx playwright test --grep "@smoke|@regression"
+matching tag will run
 
 
 */
