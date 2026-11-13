@@ -57,11 +57,11 @@ export default defineConfig({
   projects: [
     {
       //name: 'Mobile Safari',
-     //use: { ...devices['iPhone 12'] },
+     //use: { ...devices['iPhone 17'] },
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
-        headless : false,
-        viewport : {width : 1280,height:585},
+       headless : false,
+      viewport : {width : 1280,height:585},
       },
       
       
