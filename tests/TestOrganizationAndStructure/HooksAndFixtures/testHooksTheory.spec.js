@@ -1,6 +1,7 @@
 /*
 
-Test hooks are used to execute some common code before or after test cases. They help avoid writing the same code repeatedly in multiple tests.
+Test hooks are used to execute some common code before or after test cases. 
+They help avoid writing the same code repeatedly in multiple tests.
 
 1. Types of Playwright hooks
 Playwright provides four main test hooks:

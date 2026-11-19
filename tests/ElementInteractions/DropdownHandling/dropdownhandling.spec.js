@@ -1,6 +1,7 @@
 /*
 
-Dropdown handling is an important part of UI automation. In Playwright, the approach depends on the type of dropdown used by the website.
+Dropdown handling is an important part of UI automation. 
+In Playwright, the approach depends on the type of dropdown used by the website.
 
 There are three main types you should practise:
 1. Multi-select dropdown — select more than one option.

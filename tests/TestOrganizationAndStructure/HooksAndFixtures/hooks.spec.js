@@ -3,7 +3,7 @@ import {test,expect} from '@playwright/test';
 let page;
 let context;
 
-//test.describe.configure({ mode: 'parallel' });
+test.describe.configure({ mode: 'parallel' });
 
 //Before ALL
 test.beforeAll('Login',async({browser})=>{

@@ -1,6 +1,7 @@
 /*
 
-Assertions verify whether the actual result matches the expected result. In Playwright, the key difference between hard and soft assertions is what happens when an assertion fails.
+Assertions verify whether the actual result matches the expected result. 
+In Playwright, the key difference between hard and soft assertions is what happens when an assertion fails.
 
 Hard Asserions :
 A hard assertion uses the normal expect() syntax.

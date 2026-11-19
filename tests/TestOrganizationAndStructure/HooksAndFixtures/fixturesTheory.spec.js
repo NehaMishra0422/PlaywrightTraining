@@ -1,10 +1,14 @@
 /*
 
 Example - Imagine in a classroom you have to teach , the whiteboeard are ready, projector is connected and markers are all placed.
-You just have to teach as all things are already setup ,so similarly fixtures provides setup that are neede dto perform tests.
+You just have to teach as all things are already setup ,so similarly fixtures provides setup that are needed to perform tests.
 
 1. Fixture -
 A fixture is a reusable setup mechanism that provides everything a test needs to execute.
+
+In simple words, fixtures prepare everything your test needs before execution and clean it up after execution.
+
+For example, instead of manually launching a browser, creating a page, and closing the browser in every test, Playwright provides built-in fixtures.
 
 Imagine you're testing an e-commerce website.
 

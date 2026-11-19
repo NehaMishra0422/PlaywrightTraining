@@ -5,4 +5,4 @@ test('Select Multiple value', async({page})=>{
     await page.locator('#colors').selectOption(['red','blue']);
     await expect(page.locator('#colors')).toHaveValues(['red','blue']);
     
-})    
+})   
